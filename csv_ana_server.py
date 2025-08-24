@@ -481,7 +481,7 @@ COLOR_PALETTES = {
 }
 
 # Current palette selection - Dark metallic themes for sophisticated appeal
-CURRENT_PALETTE = 'dark_bronze'
+CURRENT_PALETTE = 'dark_steel'
 
 def get_gradient_colors(palette_name, num_colors):
     """Generate stunning metallic gradient colors with shine effects"""
@@ -1063,19 +1063,19 @@ class TripAnalyticsTools:
         
         # Performance rating
         if summary['performance_score'] >= 80:
-            performance_emoji = "🏆"
+            performance_emoji = ""
             performance_text = "Excellent"
         elif summary['performance_score'] >= 60:
-            performance_emoji = "✅"
+            performance_emoji = ""
             performance_text = "Good"
         elif summary['performance_score'] >= 40:
-            performance_emoji = "⚠️"
+            performance_emoji = ""
             performance_text = "Fair"
         else:
-            performance_emoji = "❌"
+            performance_emoji = ""
             performance_text = "Needs Improvement"
         
-        stats_text = f""" SUMMARY ({date_str}) {period_insight}
+        stats_text = f"""SUMMARY ({date_str}) {period_insight}
         
 Total Trips: {summary['total_trips']}
 Completed: {summary['completed_trips']} ({summary['completion_rate']:.1f}%)
@@ -1083,7 +1083,7 @@ Cancelled: {summary['cancelled_trips']}
 Trip Time: {summary['avg_trip_time']:.1f} min (Range: {summary['min_trip_time']:.1f}-{summary['max_trip_time']:.1f})
 On-Time Rate: {summary['on_time_rate']:.1f}%
 {daily_insight}
-{performance_emoji} Performance: {performance_text} ({summary['performance_score']:.1f}/100)"""
+Performance: {performance_text} ({summary['performance_score']:.1f}/100)"""
         
         # Enhanced summary box with gradient background
         gradient_bg = get_gradient_colors(CURRENT_PALETTE, 3)[1]
@@ -1346,11 +1346,6 @@ On-Time Rate: {summary['on_time_rate']:.1f}%
                     f'{rate:.1f}%',
                     ha='center', va='bottom', fontweight='bold', fontsize=12,
                     color='darkblue')
-            # Add subtle shadow effect for depth
-            ax1.text(bar.get_x() + bar.get_width()/2. + 1, height + 1,
-                    f'{rate:.1f}%',
-                    ha='center', va='bottom', fontweight='bold', fontsize=12,
-                    color='white', alpha=0.3)
         
         # Enhanced performance zones with gradient colors
         zone_colors = get_gradient_colors(CURRENT_PALETTE, 3)
@@ -1733,9 +1728,6 @@ On-Time Rate: {summary['on_time_rate']:.1f}%
                 # Enhanced text with shadow effect for elegance
                 ax1.text(j, i, f'{value:.1f}%', ha='center', va='center', 
                         color='white' if value < 50 else 'black', fontweight='bold', fontsize=11)
-                # Add subtle shadow for depth
-                ax1.text(j + 0.1, i - 0.1, f'{value:.1f}%', ha='center', va='center', 
-                        color='gray', fontweight='bold', fontsize=11, alpha=0.3)
         
         # Dynamic title based on period type
         if period_type == 'daily' or freq == 'D':
