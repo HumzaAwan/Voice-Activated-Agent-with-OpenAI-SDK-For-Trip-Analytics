@@ -1,0 +1,110 @@
+# =============================================================================
+# TRIP ANALYTICS VOICE-ACTIVATED SYSTEM - COMPLETE REQUIREMENTS
+# =============================================================================
+# 
+# This file contains ALL required dependencies for the complete system:
+# - csv_ana_server.py: Main analytics server with dynamic plotting
+# - server_side.py: LLM server for intelligent query processing
+# - stt_server.py: Speech-to-Text server for voice input
+# - stt_client.py: STT client for voice interaction
+# =============================================================================
+
+# =============================================================================
+# CORE WEB FRAMEWORK
+# =============================================================================
+Flask>=2.3.0                    # Web framework for all servers
+requests>=2.31.0                # HTTP library for API calls
+
+# =============================================================================
+# DATA PROCESSING & ANALYTICS
+# =============================================================================
+pandas>=2.0.0                   # Data manipulation and analysis
+numpy>=1.24.0                   # Numerical computing
+matplotlib>=3.7.0               # Plotting and visualization
+seaborn>=0.12.0                 # Enhanced statistical plotting (optional)
+
+# =============================================================================
+# ARTIFICIAL INTELLIGENCE & LLM
+# =============================================================================
+openai>=1.0.0                   # OpenAI API client for LLM integration
+
+# =============================================================================
+# SPEECH-TO-TEXT & AUDIO PROCESSING
+# =============================================================================
+pyaudio>=0.2.11                 # Audio input/output
+librosa>=0.10.0                 # Audio analysis and processing
+openai-whisper>=20231117        # Speech recognition model
+soundfile>=0.12.0               # Audio file I/O
+audioread>=3.0.0                # Audio file reading
+
+# =============================================================================
+# SYSTEM & UTILITIES
+# =============================================================================
+python-dotenv>=1.0.0            # Environment variable management
+uuid>=1.30                      # Unique identifier generation
+subprocess>=3.11                 # System process management
+threading>=3.11                 # Threading support
+queue>=3.11                     # Queue data structure
+warnings>=3.11                  # Warning system
+re>=3.11                        # Regular expressions
+json>=3.11                      # JSON processing
+os>=3.11                        # Operating system interface
+time>=3.11                      # Time functions
+datetime>=3.11                  # Date and time handling
+argparse>=3.11                  # Command line argument parsing
+concurrent.futures>=3.11        # Concurrent execution
+signal>=3.11                    # Signal handling
+atexit>=3.11                    # Exit handlers
+
+# =============================================================================
+# DEVELOPMENT & TESTING (Optional)
+# =============================================================================
+# pytest>=7.0.0                 # Testing framework
+# black>=23.0.0                 # Code formatting
+# flake8>=6.0.0                 # Code linting
+
+# =============================================================================
+# INSTALLATION NOTES
+# =============================================================================
+# 
+# 1. Install all requirements:
+#    pip install -r requirements_final.txt
+# 
+# 2. For audio processing on macOS, you may need:
+#    brew install portaudio
+# 
+# 3. For audio processing on Ubuntu/Debian:
+#    sudo apt-get install portaudio19-dev
+# 
+# 4. For audio processing on Windows:
+#    pip install pyaudio (may require wheel file)
+# 
+# 5. Optional: Install seaborn for enhanced visualizations
+#    pip install seaborn
+# 
+# =============================================================================
+# SYSTEM COMPONENTS
+# =============================================================================
+# 
+# csv_ana_server.py: Main analytics server (Port 5001)
+# - Dynamic date range support
+# - Intelligent chart type selection
+# - Real-time data processing
+# - Beautiful metallic color themes
+# 
+# server_side.py: LLM server (Port 5000)
+# - Natural language date parsing
+# - Intelligent tool selection
+# - Dynamic query understanding
+# 
+# stt_server.py: Speech-to-Text server (Port 5002)
+# - Real-time audio recording
+# - Whisper-based transcription
+# - Voice command processing
+# 
+# stt_client.py: STT client
+# - Voice input interface
+# - Audio streaming
+# - Transcription display
+# 
+# =============================================================================
