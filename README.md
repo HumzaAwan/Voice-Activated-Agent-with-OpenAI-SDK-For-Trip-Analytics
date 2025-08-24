@@ -291,7 +291,7 @@ pip install -r requirements_final.txt
 
 ## 📄 License
 
-This project is for educational and research purposes. Please review and comply with all third-party library licenses.
+Please review and comply with all third-party library licenses.
 
 ## 🆘 Support
 
